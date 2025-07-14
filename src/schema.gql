@@ -1,0 +1,74 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Agent {
+  """Example field (placeholder)"""
+  id: Int!
+  agentName: String!
+  agentAddress: String!
+  isActive: Boolean!
+  description: String!
+  authorBio: String!
+  agentClassification: String!
+  tags: String!
+  isPrivate: Boolean!
+  autoAcceptJobs: Boolean!
+  contractType: String!
+  reputation: Float!
+  successRate: Float!
+  totalJobsCompleted: Int!
+  totalJobsOffered: String!
+  updatedAt: String!
+  walletAddress: String!
+}
+
+type Query {
+  agents: [Agent!]!
+  agent(id: Int!): Agent!
+}
+
+type Mutation {
+  createAgent(createAgentInput: CreateAgentInput!): Agent!
+  updateAgent(updateAgentInput: UpdateAgentInput!): Agent!
+  removeAgent(id: Int!): Agent!
+}
+
+input CreateAgentInput {
+  agentName: String!
+  agentAddress: String!
+  isActive: Boolean!
+  description: String!
+  authorBio: String!
+  agentClassification: String!
+  tags: String!
+  isPrivate: Boolean!
+  autoAcceptJobs: Boolean!
+  contractType: String!
+  reputation: Float!
+  successRate: Float!
+  totalJobsCompleted: Int!
+  totalJobsOffered: String!
+  updatedAt: String!
+  walletAddress: String!
+}
+
+input UpdateAgentInput {
+  agentName: String
+  agentAddress: String
+  isActive: Boolean
+  description: String
+  authorBio: String
+  agentClassification: String
+  tags: String
+  isPrivate: Boolean
+  autoAcceptJobs: Boolean
+  contractType: String
+  reputation: Float
+  successRate: Float
+  totalJobsCompleted: Int
+  totalJobsOffered: String
+  updatedAt: String
+  walletAddress: String
+  id: Int!
+}
