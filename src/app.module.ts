@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { TestModule } from './test/test.module';
+import { Test } from './test/entities/test.entity';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { TestModule } from './test/test.module';
         username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_DATABASE'),
-        entities: [join(process.cwd(), 'dist/**/*.entity{.ts,.js}')], // 注册实体
+        entities: [Test], // [join(process.cwd(), 'dist/**/*.entity{.ts,.js}')], // 注册实体
         synchronize: true, // 生产环境慎用，会自动同步实体到数据库，可能导致数据丢失
       }),
     }),
