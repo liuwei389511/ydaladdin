@@ -1,7 +1,7 @@
 import { ObjectType, Field, Int, Float } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'agents' })
+@Entity({ name: 'agent' })
 @ObjectType()
 export class Agent {
   @PrimaryGeneratedColumn()
@@ -21,54 +21,54 @@ export class Agent {
   isActive: boolean;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  description?: string;
+  @Field(() => String, { nullable: true })
+  description: string;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  authorBio?: string;
+  @Field(() => String, { nullable: true })
+  authorBio: string;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  agentClassification?: string;
+  @Field(() => String, { nullable: true })
+  agentClassification: string;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  tags?: string;
+  @Field(() => String, { nullable: true })
+  tags: string;
 
   @Column({ type: 'boolean', nullable: true })
-  @Field(() => Boolean)
-  isPrivate?: boolean;
+  @Field(() => Boolean, { nullable: true })
+  isPrivate: boolean;
 
   @Column({ type: 'boolean', nullable: true })
-  @Field(() => Boolean)
-  autoAcceptJobs?: boolean;
+  @Field(() => Boolean, { nullable: true })
+  autoAcceptJobs: boolean;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  contractType?: string;
+  @Field(() => String, { nullable: true })
+  contractType: string;
 
   @Column({ type: 'float', nullable: true })
-  @Field(() => Float)
-  reputation?: number;
+  @Field(() => Float, { nullable: true })
+  reputation: number;
 
   @Column({ type: 'float', nullable: true })
-  @Field(() => Float)
-  successRate?: number;
+  @Field(() => Float, { nullable: true })
+  successRate: number;
 
   @Column({ type: 'int', nullable: true })
-  @Field(() => Int)
-  totalJobsCompleted?: number;
+  @Field(() => Int, { nullable: true })
+  totalJobsCompleted: number;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  totalJobsOffered?: string;
+  @Field(() => String, { nullable: true })
+  totalJobsOffered: string;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  updatedAt?: string;
+  @Field(() => String, { nullable: true })
+  updatedAt: string;
 
   @Column({ type: 'text', nullable: true })
-  @Field(() => String)
-  walletAddress?: string;
+  @Field(() => String, { nullable: true })
+  walletAddress: string;
 }

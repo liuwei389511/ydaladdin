@@ -8,19 +8,19 @@ type Agent {
   agentName: String!
   agentAddress: String!
   isActive: Boolean!
-  description: String!
-  authorBio: String!
-  agentClassification: String!
-  tags: String!
-  isPrivate: Boolean!
-  autoAcceptJobs: Boolean!
-  contractType: String!
-  reputation: Float!
-  successRate: Float!
-  totalJobsCompleted: Int!
-  totalJobsOffered: String!
-  updatedAt: String!
-  walletAddress: String!
+  description: String
+  authorBio: String
+  agentClassification: String
+  tags: String
+  isPrivate: Boolean
+  autoAcceptJobs: Boolean
+  contractType: String
+  reputation: Float
+  successRate: Float
+  totalJobsCompleted: Int
+  totalJobsOffered: String
+  updatedAt: String
+  walletAddress: String
 }
 
 type Query {
@@ -38,19 +38,19 @@ input CreateAgentInput {
   agentName: String!
   agentAddress: String!
   isActive: Boolean!
-  description: String!
-  authorBio: String!
-  agentClassification: String!
-  tags: String!
-  isPrivate: Boolean!
-  autoAcceptJobs: Boolean!
-  contractType: String!
-  reputation: Float!
-  successRate: Float!
-  totalJobsCompleted: Int!
-  totalJobsOffered: String!
-  updatedAt: String!
-  walletAddress: String!
+  description: String
+  authorBio: String
+  agentClassification: String
+  tags: String
+  isPrivate: Boolean
+  autoAcceptJobs: Boolean
+  contractType: String
+  reputation: Float
+  successRate: Float
+  totalJobsCompleted: Float
+  totalJobsOffered: String
+  updatedAt: String
+  walletAddress: String
 }
 
 input UpdateAgentInput {
@@ -66,7 +66,7 @@ input UpdateAgentInput {
   contractType: String
   reputation: Float
   successRate: Float
-  totalJobsCompleted: Int
+  totalJobsCompleted: Float
   totalJobsOffered: String
   updatedAt: String
   walletAddress: String

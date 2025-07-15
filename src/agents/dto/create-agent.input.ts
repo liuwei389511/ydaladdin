@@ -1,55 +1,55 @@
-import { InputType, Int, Field, Float } from '@nestjs/graphql';
+import { Field, InputType } from '@nestjs/graphql';
 
 @InputType()
 export class CreateAgentInput {
   //   @Field(() => Int, { description: 'Example field (placeholder)' })
   //   id: number;
 
-  @Field(() => String)
+  @Field()
   agentName: string;
 
-  @Field(() => String)
+  @Field()
   agentAddress: string;
 
-  @Field(() => Boolean)
+  @Field()
   isActive: boolean;
 
-  @Field(() => String)
-  description?: string;
+  @Field({ nullable: true })
+  description: string;
 
-  @Field(() => String)
-  authorBio?: string;
+  @Field({ nullable: true })
+  authorBio: string;
 
-  @Field(() => String)
-  agentClassification?: string;
+  @Field({ nullable: true })
+  agentClassification: string;
 
-  @Field(() => String)
-  tags?: string;
+  @Field({ nullable: true })
+  tags: string;
 
-  @Field(() => Boolean)
-  isPrivate?: boolean;
+  @Field({ nullable: true })
+  isPrivate: boolean;
 
-  @Field(() => Boolean)
-  autoAcceptJobs?: boolean;
+  @Field({ nullable: true })
+  autoAcceptJobs: boolean;
 
-  @Field(() => String)
-  contractType?: string;
+  @Field({ nullable: true })
+  contractType: string;
 
-  @Field(() => Float)
-  reputation?: number;
+  @Field({ nullable: true })
+  reputation: number;
 
-  @Field(() => Float)
-  successRate?: number;
+  @Field({ nullable: true })
+  successRate: number;
 
-  @Field(() => Int)
-  totalJobsCompleted?: number;
+  @Field({ nullable: true })
+  totalJobsCompleted: number;
 
-  @Field(() => String)
-  totalJobsOffered?: string;
+  @Field({ nullable: true })
+  totalJobsOffered: string;
 
-  @Field(() => String)
-  updatedAt?: string;
+  @Field({ nullable: true })
+  updatedAt: string;
 
-  @Field(() => String)
-  walletAddress?: string;
+  @Field({ nullable: true })
+  walletAddress: string;
 }
